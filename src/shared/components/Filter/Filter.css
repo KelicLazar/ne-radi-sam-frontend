@@ -1,0 +1,128 @@
+.filter-cont {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+}
+
+.filter {
+  width: 100%;
+  margin: 5rem auto 2rem;
+  min-height: fit-content;
+  max-width: 900px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.filter .action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.filter--opened {
+  border: 3px solid var(--main-text-color);
+  padding: 1.5rem 0.5rem;
+  padding-bottom: 4rem;
+  max-height: 550px;
+  height: fit-content;
+  overflow: visible;
+  transition: all 0.2s ease-in;
+}
+
+.filter--closed::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-text-color);
+  position: absolute;
+  padding-left: 10px;
+  box-shadow: inset white;
+  text-shadow: inset 1px rgba(253, 253, 253, 0.758);
+}
+
+.filter--closed {
+  border: 0.1px solid var(--main-text-color);
+  overflow: hidden;
+  max-height: 3px;
+  transition: all 0.2s ease-out;
+}
+
+.filter-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filter-item {
+  margin: 0.7rem auto;
+  width: 100%;
+}
+
+.filter-item label {
+  color: var(--main-text-color);
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.7%;
+  padding: 0;
+  margin-left: 1%;
+}
+
+.filter--opened .filter-items,
+.filter--opened .filter-button {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: all 0.2s ease 0.1s;
+}
+
+.filter--closed .filter-items,
+.filter--closed .filter-button {
+  transform: scaleY(0) rotateX(180deg);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.filter-toggler {
+  position: absolute;
+  top: -35px;
+  right: 10px;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+  color: var(--main-text-color);
+  z-index: 2;
+}
+
+.filter-option {
+  margin: auto;
+  width: 100%;
+}
+
+.filter-button {
+  width: 25%;
+  min-width: fit-content;
+  margin: 2rem 10% 3rem;
+  align-self: flex-end;
+  padding-right: 1rem;
+}
+
+@media (max-width: 968px) {
+  .filter .action-buttons {
+    flex-direction: column;
+    gap: 20px;
+    align-self: center;
+  }
+  .action-buttons button {
+    align-self: center;
+    margin: 0;
+    width: 100%;
+  }
+}

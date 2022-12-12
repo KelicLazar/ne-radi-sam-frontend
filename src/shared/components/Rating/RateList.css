@@ -1,0 +1,39 @@
+.rate-heading {
+  width: fit-content;
+  margin: 1.2rem auto 1rem;
+  color: var(--main-text-color);
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  padding: 0.4rem 2rem;
+  border-bottom: 4px double var(--main-text-color);
+}
+
+.rate-info {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin: 2rem auto;
+  justify-content: space-evenly;
+  padding: 1.4rem;
+}
+.rate-info h5 {
+  color: var(--main-text-color);
+}
+
+.average-rating,
+.total-rates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  padding: 0.4rem;
+  align-self: center;
+}
+
+@media (max-width: 968px) {
+  .rate-info {
+    flex-direction: column;
+    width: 90%;
+  }
+}

@@ -1,0 +1,80 @@
+.authentication__header {
+  color: white;
+  text-align: center;
+}
+
+.authentication form {
+  margin-top: 1.5rem;
+}
+
+.authentication {
+  width: 90%;
+  max-width: 25rem;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  padding-top: 3rem;
+  border: 2px solid var(--main-text-color);
+}
+
+.authentication.auth-login {
+  min-height: 200px;
+  max-height: 400px;
+  height: fit-content;
+  transition: all 0.2s ease;
+}
+
+.authentication.auth-signup {
+  min-height: 400px;
+  max-height: 800px;
+  height: fit-content;
+  transition: all 0.2s ease;
+}
+
+.sign-up,
+.log-in {
+  width: calc(50% + 3px);
+  position: absolute;
+  top: -2px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  color: #ccc;
+  cursor: pointer;
+}
+.sign-up h3,
+.log-in h3 {
+  transform: scale(0.4);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.sign-up {
+  left: -2px;
+}
+
+.log-in {
+  right: -2px;
+}
+
+.sign-up.active,
+.log-in.active {
+  border: 2px solid var(--main-text-color);
+  background-color: var(--main-bg-color);
+  z-index: 0;
+}
+
+.sign-up.active h3,
+.log-in.active h3 {
+  transform: scale(1);
+  color: var(--main-text-color);
+  transition: all 0.2s;
+}
+
+.phone-number {
+  display: flex;
+}
+
+.authentication form {
+  margin-bottom: 1rem;
+}

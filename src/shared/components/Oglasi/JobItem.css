@@ -1,0 +1,234 @@
+.job-item {
+  margin: 6rem 0;
+  padding: 2rem;
+  position: relative;
+  color: var(--main-text-color);
+  -webkit-box-shadow: 54px 22px 90px -59px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 54px 22px 90px -59px rgba(0, 0, 0, 0.75);
+  box-shadow: 54px 22px 90px -59px rgba(0, 0, 0, 0.75);
+  border-radius: 30px 20px 40px 20px;
+  background: rgba(255, 255, 255, 0.112);
+}
+.job-item .title {
+  position: relative;
+  top: -2rem;
+  left: -2rem;
+  font-size: larger;
+  max-width: 70%;
+  width: fit-content;
+  padding: 0.4rem 1.5rem;
+  border-right: 2px solid brown;
+  border-bottom: 2px solid brown;
+  box-shadow: 0px -1px inset white;
+  border-radius: 30px 0px 10px 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: fit-content;
+}
+.title::first-letter,
+.job-description::first-letter,
+.job-item h5 {
+  text-transform: capitalize;
+}
+
+h5 i,
+h6 i {
+  color: brown;
+  box-shadow: 1px white;
+  text-shadow: 1px 1px 1px rgba(253, 253, 253, 0.758);
+}
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 1rem;
+  height: 100%;
+}
+.left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2%;
+}
+.job-content {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.job-content p {
+  font-size: 1.1rem;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+}
+.job-content p span {
+  cursor: pointer;
+  color: var(--main-text-color);
+}
+.job-content p span:hover {
+  color: rgb(167, 67, 67);
+}
+
+.left-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.left-info h5 {
+  background-color: rgba(255, 255, 255, 0.127);
+  font-size: 1rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px brown;
+}
+h5.category {
+  background-color: beige;
+}
+h5.price,
+h5.price i {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  text-shadow: none;
+}
+.job-item .date {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+.left-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.3rem 0;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-actions button {
+  margin: 0.2rem;
+  border-radius: 100px;
+}
+
+.user-heading {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.user-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  height: 100%;
+  padding: 0.4rem;
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.user-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px white;
+  opacity: 0.6;
+  background-color: var(--main-text-color);
+}
+
+.action-button {
+  width: 90%;
+  max-width: 200px;
+  font-size: medium;
+  border-color: rgb(203, 144, 144);
+  background: rgb(166, 88, 88);
+  background: linear-gradient(
+    0deg,
+    rgba(166, 88, 88, 0.9783263647255778) 0%,
+    rgba(170, 120, 120, 1) 35%,
+    rgba(163, 149, 149, 1) 100%
+  );
+  border-radius: 100px;
+}
+.action-button:hover {
+  border-color: rgba(231, 217, 217, 0.815);
+  background: rgb(54, 31, 31);
+  background: linear-gradient(
+    60deg,
+    rgba(100, 55, 55, 0.978) 0%,
+    rgb(96, 68, 68) 35%,
+    rgb(102, 94, 94) 100%
+  );
+}
+.user-info h5 {
+  width: fit-content;
+  margin-left: 4px;
+}
+
+.rating {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+.user-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  object-fit: cover;
+}
+
+/* 968px */
+@media (max-width: 768px) {
+  .flex-box {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+  }
+  .left-box {
+    align-items: center;
+  }
+
+  .footer-actions {
+    flex-wrap: wrap;
+  }
+  .job-content {
+    justify-content: center;
+    width: 100%;
+  }
+  .job-content p {
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .user-content {
+    margin: auto 0;
+    padding-bottom: 1rem;
+    align-items: center;
+  }
+  .user-content::before {
+    width: 100%;
+    height: 3px;
+    top: 100%;
+  }
+  .right-box {
+    align-self: center;
+    max-width: 100%;
+  }
+}

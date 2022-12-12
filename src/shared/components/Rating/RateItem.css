@@ -1,0 +1,98 @@
+.rate-item {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: 2rem auto;
+  justify-content: space-between;
+  border: 3px solid var(--main-text-color);
+  padding: 1rem;
+  gap: 5%;
+}
+
+.rate-item-left {
+  width: fit-content;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rate-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  padding: 0.4rem;
+  align-self: center;
+}
+
+.rate-date {
+  font-weight: 500;
+  width: 100%;
+  padding: 0.4rem;
+  color: var(--main-text-color);
+}
+.rate-comment {
+  text-align: left;
+  width: 100%;
+  padding: 0.4rem;
+  vertical-align: middle;
+}
+.rate-comment::first-letter {
+  text-transform: capitalize;
+}
+
+.rate-item-right {
+  position: relative;
+  padding: 1rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  white-space: nowrap;
+}
+.rate-item-right::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: var(--main-text-color);
+  opacity: 0.4;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rate-item-right .user-img img {
+  margin-right: 0rem;
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 968px) {
+  .rate-item {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .hr {
+    width: 100%;
+    opacity: 0.4;
+  }
+  .rate-description {
+    margin: 0;
+  }
+  .rate-item-right {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .rate-item-right::before {
+    height: 4px;
+    width: 80%;
+    margin: auto;
+    left: 10%;
+    top: 98%;
+  }
+}

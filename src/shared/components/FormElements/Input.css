@@ -1,0 +1,112 @@
+.form-control {
+  margin: 0.4rem 0;
+  position: relative;
+}
+
+.form-control label {
+  position: absolute;
+  padding: 0.25rem;
+  top: 17px;
+  left: 25px;
+  text-transform: uppercase;
+  color: #ccc;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  pointer-events: none;
+}
+
+ form .form-control {
+  /* REMOVE DEFAULT STAYLING FROM BOOTSTRAP */
+  border: none;
+}
+
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  font: inherit;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background: #f8f8f8;
+  padding: 0.8rem;
+  padding-top: 1rem;
+  color: var(--main-text-color);
+  font-weight:600;
+  letter-spacing: 0.1rem;
+}
+
+.form-control textarea.non-resizable {
+  resize: none;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+  background: #ebebeb;
+  background-color: white;
+  border-color: var(--main-text-color);
+}
+
+
+
+.form-control input:not([value=""]) ~ label,
+.form-control textarea:not(:empty) ~ label {
+  transform: translateX(5px) translateY(-25px);
+  font-size: 0.8rem;
+  background-color: white;
+  border-left: 2px solid var(--main-bg-color);
+  border-right: 2px solid var(--main-bg-color);
+  font-weight: bold;
+}
+
+.form-control input:-webkit-autofill {
+  -webkit-text-fill-color: brown !important;
+  box-shadow: 0 0 0 50px white inset;
+}
+
+.form-control input:focus ~ label,
+.form-control textarea:focus ~ label {
+  transform: translateX(5px) translateY(-25px);
+  color: var(--main-text-color);
+  background-color: white;
+  border-left: 2px solid var(--main-text-color);
+  border-right: 2px solid var(--main-text-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.form-control:nth-child(1) input:focus ~ label {
+  background-color: var(--main-text-color);
+  color: white;
+}
+
+form .form-control--invalid > label[for] {
+  color: red;
+  border-color: red;
+}
+
+form .form-control--invalid:nth-child(1) input:focus ~ label[for],
+form .form-control--invalid:nth-child(1) input:not([value='']) ~ label[for]{
+  background-color: red;
+  color: white;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+  background: #ffd1d1;
+  border-color: red;
+  color: red;
+}
+
+.form-control--invalid p {
+  color: red;
+}
+
+.form-control input[disabled],
+.form-control textarea[disabled] {
+  color: var(--main-bg-color);
+  font-style: italic;
+}
+
+
+
+

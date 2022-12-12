@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(209, 212, 201);
+  --main-bg-color: #b4acac;
+  --main-text-color: brown;
+}
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+}
+#root {
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  background: rgb(166, 88, 88);
+  background: linear-gradient(
+    60deg,
+    rgba(166, 88, 88, 0.9783263647255778) 0%,
+    rgba(170, 120, 120, 1) 35%,
+    rgba(163, 149, 149, 1) 100%
+  );
+}
+::-webkit-scrollbar {
+  color: red;
+  background-color: rgb(155, 151, 151);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgba(245, 245, 220, 0.473);
+  background-color: var(--main-text-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--main-bg-color);
+  -webkit-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slide-in-left-enter {
+  transform: translateX(-100%);
+}
+
+.slide-in-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.slide-in-left-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-in-left-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.center,
+.card.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid beige;
+  background-color: var(--main-text-color);
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.arrow i {
+  position: relative;
+  top: 0;
+  color: var(--main-bg-color);
+  font-size: 3rem;
+  padding: 0 0.8rem;
+}
+.arrow:hover i {
+  top: -10px;
+  transition: all 0.2s ease-in;
+}
+
+.arrow.hidden {
+  opacity: 0;
+  display: none;
+  transition: all 0.4s;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
