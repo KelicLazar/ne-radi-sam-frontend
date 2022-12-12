@@ -44,6 +44,7 @@ const Auth = (props) => {
           ...formState.inputs,
           name: undefined,
           image: undefined,
+          phone: undefined,
         },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );

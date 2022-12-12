@@ -139,7 +139,10 @@ const JobItem = (props) => {
         <h4>
           Zaposli korisnika {props.name} za posao {props.title}
         </h4>
-        <h6>Cena je {props.price}RSD</h6>
+        <h6>
+          Cena je {props.price}
+          <i style={{ color: "black" }} class="uil uil-euro"></i>
+        </h6>
       </Modal>
       <div className="job-item">
         <h3 className="title">{props.title}</h3>
